@@ -110,6 +110,40 @@ PUT /megacorp/employee/3
 | employee | 类型名（表）           |
 | 1        | 员工id（文档，列，id） |
 
+#### 地理位置格式
+
+```json
+PUT my_index
+{
+  "mappings": {
+    "_doc": {
+      "properties": {
+        "location": {
+          "type": "geo_point"
+        }
+      }
+    }
+  }
+}
+
+PUT my_index/_doc/1
+{
+  "text": "Geo-point as an object",
+  "location": { 
+    "lat": 41.12,
+    "lon": -71.34
+  }
+}
+
+PUT my_index/_doc/2
+{
+  "text": "Geo-point as a string",
+  "location": "41.12,-71.34" 
+}
+```
+
+
+
 #### 简单搜索
 
 **检索单个员工的信息：**
