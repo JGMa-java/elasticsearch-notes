@@ -786,3 +786,30 @@ Elasticsearch 提供了丰富的查询过滤语句，而有一些是我们较常
   或者：
 
   DELETE secisland3/_alias/*
+
+##### painless脚本
+
+```json
+{
+  "query": {
+    "range": {
+      "PASSTIME": {
+        "gte": "2020-03-14 15:04:08",
+        "lte": "2020-03-18 15:04:08"
+      }
+    }
+  },
+  "script_fields": {
+    "rangepasstime": {
+      "script": {
+        "lang": "painless",
+        "source":"doc['ID'].value * params.factor",
+        "params": {
+          "factor":1
+        }
+      }
+    }
+  }
+}
+```
+
