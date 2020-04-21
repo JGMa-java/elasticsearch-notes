@@ -195,6 +195,27 @@ PUT my_index/_doc/2
 
 ​	Elasticsearch提供丰富且灵活的查询语言叫做**DSL查询(Query DSL)**,它允许你构建更加`复杂`、`强大`的查询。
 
+##### 映射
+
+###### 空值
+
+```json
+{
+  "mappings": {
+    "_doc": {
+      "properties": {
+        "status_code": {
+          "type":       "keyword",
+          "null_value": "NULL" 
+        }
+      }
+    }
+  }
+}
+```
+
+
+
 ##### DSL语法
 
 **DSL(Domain Specific Language特定领域语言)**以JSON请求体的形式出现。我们可以这样表示之前关于“Smith”的查询:
