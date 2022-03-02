@@ -1002,7 +1002,11 @@ discovery.zen.minimum_master_nodes=（master_eligible_nodes/2）+1 //默认值�
 
 https://blog.csdn.net/qq_20545159/article/details/80549335
 
-#### xpack代码
+xpack参考
 
 https://www.cnblogs.com/WSPJJ/articles/11121138.html
+
+#### xpack集群加密，客户端链接加密后的集群，kibana操作
+
+[elasticsearch6.5.0(es6.5)加密xpack,java客户端访问xpack集群SSL_JGMa_TiMo的博客-CSDN博客_elasticsearch6 加密](https://blog.csdn.net/JGMa_TiMo/article/details/97396313)
 
